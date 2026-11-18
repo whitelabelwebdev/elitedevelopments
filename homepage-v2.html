@@ -6,237 +6,463 @@
   <title>Homepage V2 | Elite Real Estate Group | Commercial Real Estate in Edmonton</title>
   <meta name="description" content="Elite Real Estate Group owns and manages over 2 million square feet of leased space in Edmonton and Alberta, with over $625M in assets, 500 retail tenants and 600 apartments.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#f5f1ea">
-  <link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#0a0e29">
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/v2.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="mast">
-    <div class="wrap mast-in">
-      <a class="mast-logo" href="#top" aria-label="Elite Real Estate Group home"><img src="assets/images/logo-footer.png" alt="Elite Real Estate Group, Real Estate Development and Investments" width="210" height="53"></a>
-      <nav class="mast-nav" aria-label="Main"><ul><li><a href="#" data-nolink>About</a></li><li><a href="#" data-nolink>Team</a></li><li><a href="#" data-nolink>Portfolio</a></li><li><a href="#" data-nolink>Developments</a></li><li><a href="#" data-nolink>Elite Living</a></li><li><a href="#" data-nolink>Elite Capital</a></li><li><a href="#" data-nolink>Newsroom</a></li><li><a href="#" data-nolink>Contact</a></li></ul></nav>
-      <a class="mast-call" href="tel:+17802440021"><span>Call</span> (780) 244-0021</a>
-      <button class="mast-burger" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><span>Menu</span></button>
-    </div>
-    <div class="mmenu" id="mmenu" hidden>
-      <ul>
-        <li><a href="#" data-nolink>About</a></li>
-        <li><a href="#" data-nolink>Team</a></li>
-        <li><a href="#" data-nolink>Portfolio</a></li>
-        <li><a href="#" data-nolink>Developments</a></li>
-        <li><a href="#" data-nolink>Elite Living</a></li>
-        <li><a href="#" data-nolink>Elite Capital</a></li>
-        <li><a href="#" data-nolink>Newsroom</a></li>
-        <li><a href="#" data-nolink>Contact</a></li>
-      </ul>
-      <p><a href="tel:+17802440021">(780) 244-0021</a><br><a href="mailto:info@elitedevelopments.ca">info@elitedevelopments.ca</a></p>
+  <header class="hd" id="hd">
+    <div class="hd-in">
+      <a class="hd-logo" href="#top" aria-label="Elite Real Estate Group home"><img src="assets/images/logo-header.png" alt="Elite Real Estate Group, Real Estate Development and Investments" width="230" height="58"></a>
+      <nav class="hd-nav" aria-label="Main"><ul><li><a href="#" data-nolink>About</a></li><li><a href="#" data-nolink>Team</a></li><li><a href="#" data-nolink>Portfolio</a></li><li><a href="#" data-nolink>Developments</a></li><li><a href="#" data-nolink>Elite Living</a></li><li><a href="#" data-nolink>Elite Capital</a></li><li><a href="#" data-nolink>Newsroom</a></li></ul></nav>
+      <div class="hd-right">
+        <a class="hd-tel" href="tel:+17802440021">(780) 244-0021</a>
+        <a class="btn btn-gold btn-sm" href="#contact">Contact us</a>
+        <button class="hd-burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><i></i><i></i><i></i></button>
+      </div>
     </div>
   </header>
+  <div class="drawer" id="drawer" hidden>
+    <ul><li><a href="#" data-nolink>About</a></li><li><a href="#" data-nolink>Team</a></li><li><a href="#" data-nolink>Portfolio</a></li><li><a href="#" data-nolink>Developments</a></li><li><a href="#" data-nolink>Elite Living</a></li><li><a href="#" data-nolink>Elite Capital</a></li><li><a href="#" data-nolink>Newsroom</a></li><li><a href="#" data-nolink>Contact</a></li></ul>
+    <div class="drawer-foot">
+      <a href="tel:+17802440021">(780) 244-0021</a>
+      <a href="mailto:info@elitedevelopments.ca">info@elitedevelopments.ca</a>
+    </div>
+  </div>
 
   <main id="main">
-
-    <!-- Opening: typeset headline with inline pictures -->
-    <section class="open" id="top" aria-labelledby="open-title">
-      <div class="wrap">
-        <p class="open-meta up" style="--d:.05s"><span>Elite Real Estate Group</span><span>Edmonton, Alberta</span><span>Real Estate Development and Investments</span></p>
-        <h1 id="open-title" class="open-title">
-          <span class="up" style="--d:.15s">Enhancing <span class="chip chip-round" aria-hidden="true"><video autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg"><source src="assets/images/hero.mp4" type="video/mp4"></video></span> the value</span>
-          <span class="up" style="--d:.28s">of <span class="chip chip-img" aria-hidden="true"><img src="assets/images/port/elite-centre-parsons-sm.jpg" alt=""></span> commercial</span>
-          <span class="up" style="--d:.41s">real estate in <em>Edmonton.</em></span>
-        </h1>
-      </div>
-      <div class="wrap open-row">
-        <p class="open-lede up" style="--d:.6s">Elite owns and manages leased space that is primarily retail shopping centres and apartments in Edmonton and Alberta. One of the most rapidly expanding commercial real estate companies in the city.</p>
-        <div class="open-ctas up" style="--d:.7s">
-          <a class="pill pill-dark" href="#talk">Inquire about leasing</a>
-          <a class="pill" href="#talk">Buying opportunities</a>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <video class="hero-vid" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg" aria-hidden="true"><source src="assets/images/hero.mp4" type="video/mp4"></video>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap hero-in">
+        <p class="hero-kick rise" style="--d:.1s"><span class="bar" aria-hidden="true"></span>Real Estate Development and Investments</p>
+        <h1 id="hero-title" class="rise" style="--d:.25s">Enhancing the value of commercial real estate in <span class="gold">Edmonton.</span></h1>
+        <p class="hero-lede rise" style="--d:.4s">Elite owns and manages leased space that is primarily retail shopping centres and apartments in Edmonton and Alberta.</p>
+        <div class="hero-ctas rise" style="--d:.55s">
+          <a class="btn btn-gold" href="#contact">Inquire about leasing <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <a class="btn btn-line" href="#portfolio">View our portfolio</a>
         </div>
       </div>
-      <figure class="open-film up" style="--d:.8s">
-        <video class="film" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg" aria-hidden="true"><source src="assets/images/hero.mp4" type="video/mp4"></video>
-        <figcaption><span>Aerial footage from across the Elite portfolio</span><button class="film-btn" type="button" aria-pressed="false">Pause</button></figcaption>
-      </figure>
+      <button class="hero-pause" type="button" aria-pressed="false" aria-label="Pause background video"><span></span></button>
+    </section>
+
+    <section class="stats" aria-label="Elite Real Estate Group at a glance">
       <div class="wrap">
-        <dl class="tally" data-tally>
-          <div><dt><span data-n="2">2</span>M+</dt><dd>square feet of leased space</dd></div>
-          <div><dt>$<span data-n="625">625</span>M+</dt><dd>in assets</dd></div>
-          <div><dt><span data-n="500">500</span>+</dt><dd>retail tenants</dd></div>
-          <div><dt><span data-n="600">600</span>+</dt><dd>apartments</dd></div>
+        <dl class="stats-in" data-stats>
+          <div><dt><span data-n="2">0</span><small>M+</small></dt><dd>Square feet leased</dd></div>
+          <div><dt><small>$</small><span data-n="625">0</span><small>M+</small></dt><dd>In assets</dd></div>
+          <div><dt><span data-n="500">0</span><small>+</small></dt><dd>Retail tenants</dd></div>
+          <div><dt><span data-n="600">0</span><small>+</small></dt><dd>Apartments</dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- Story: magazine spread -->
-    <section class="story" aria-labelledby="story-title">
-      <div class="wrap story-grid">
-        <div class="story-side reveal">
-          <p class="eyebrow">Who we are</p>
-          <h2 id="story-title">Two lines of business, one owner group.</h2>
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="wrap intro-grid">
+        <div class="reveal">
+          <p class="kick">Elite Real Estate Group</p>
+          <h2 id="intro-title">One of the most rapidly expanding commercial real estate companies in Edmonton.</h2>
         </div>
-        <div class="story-text reveal">
-          <p class="dropcap">Elite Real Estate Group is a privately owned commercial real estate company in Edmonton. Elite is in the business of acquiring assets such as retail shopping centres, apartment complexes and industrial buildings. The second arm of the company is actively involved in the development of retail shopping centres and commercial buildings.</p>
-          <p>The ownership is experienced in creating and enhancing the value of their assets, and the portfolio includes several international, national and regional tenants.</p>
+        <div class="intro-copy reveal">
+          <p>Elite Real Estate Group is uniquely operating in two lines of business. Elite Real Estate is a privately owned company, with ownership that is experienced in creating and enhancing the value of their assets.</p>
+          <p>The portfolio includes several international, national and regional tenants.</p>
+          <a class="link-gold" href="#leadership">Meet the partners <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
         </div>
-        <figure class="story-img story-img-a reveal"><img src="assets/images/port/the-palisades-sm.jpg" alt="The Palisades apartments, 9820 104 Street NW, Edmonton" loading="lazy"><figcaption>The Palisades, 104 Street NW</figcaption></figure>
-        <figure class="story-img story-img-b reveal"><img src="assets/images/port/elite-centre-tamarack-sm.jpg" alt="Elite Centre Tamarack, 2341 Maple Road NW, Edmonton" loading="lazy"><figcaption>Elite Centre Tamarack, Maple Road NW</figcaption></figure>
-        <blockquote class="story-quote reveal"><p>Dedicated to enhancing the value of its assets and driving growth in the commercial real estate market.</p></blockquote>
+      </div>
+      <div class="arms">
+        <article class="arm reveal">
+          <img src="assets/images/port/elite-centre-ellerslie-landing.jpg" alt="Elite Centre Ellerslie Landing, an Elite acquisition in Edmonton" loading="lazy">
+          <div class="arm-body">
+            <p class="kick">Acquisitions</p>
+            <h3>Acquire</h3>
+            <p>Elite is in the business of acquiring assets such as retail shopping centres, apartment complexes and industrial buildings.</p>
+          </div>
+        </article>
+        <article class="arm reveal">
+          <img src="assets/images/dev/cardinal-landing.jpg" alt="Rendering of Cardinal Landing, an Elite development" loading="lazy">
+          <div class="arm-body">
+            <p class="kick">Development</p>
+            <h3>Develop</h3>
+            <p>The second arm of the company is actively involved in the development of retail shopping centres and commercial buildings.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Services as a sentence -->
-    <section class="verbs" aria-labelledby="verbs-title">
+    <section class="svc" aria-labelledby="svc-title">
       <div class="wrap">
-        <p class="eyebrow eyebrow-light reveal">What we do</p>
-        <h2 id="verbs-title" class="verbs-line reveal">We <span class="v v1">develop</span>, <span class="v v2">acquire</span>, <span class="v v3">lease</span> and <span class="v v4">manage</span>.</h2>
-        <ul class="verbs-list reveal">
-          <li><span class="sw sw1"></span>Real Estate Development</li>
-          <li><span class="sw sw2"></span>Real Estate Acquisitions</li>
-          <li><span class="sw sw3"></span>In-house Leasing</li>
-          <li><span class="sw sw4"></span>Property Management</li>
+        <div class="svc-head reveal">
+          <p class="kick">What we do</p>
+          <h2 id="svc-title">Dedicated to enhancing the value of our assets and driving growth in the commercial real estate market.</h2>
+        </div>
+        <ul class="svc-row">
+          <li class="reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 42h36M10 42V18l14-10 14 10v24M18 42V30h12v12M18 22h4M26 22h4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><h3>Real Estate Development</h3></li>
+          <li class="reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38h32M12 38V14h16v24M28 22h8v16M17 20h6M17 26h6M17 32h6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="36" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M36 9.5v5M33.5 12h5" stroke="currentColor" stroke-width="1.6"/></svg><h3>Real Estate Acquisitions</h3></li>
+          <li class="reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M24 24h18M36 24v6M41 24v4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><h3>In-house Leasing</h3></li>
+          <li class="reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="7" width="30" height="34" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15 15h18M15 22h18M15 29h11M30 33l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><h3>Property Management</h3></li>
         </ul>
       </div>
     </section>
 
-    <!-- Now building: staggered spread -->
-    <section class="build" aria-labelledby="build-title">
+    <section class="dv" id="developments" aria-labelledby="dv-title">
+      <div class="dv-stage" aria-live="polite">
+          <article class="dv-slide is-on" data-i="0" aria-hidden="false">
+            <img src="assets/images/dev/elite-centre-chappelle.jpg" alt="Elite Centre Chappelle, 8305 Chappelle Way SW, Edmonton, Alberta" loading="eager">
+          </article>
+          <article class="dv-slide" data-i="1" aria-hidden="true">
+            <img src="assets/images/dev/cardinal-landing.jpg" alt="Cardinal Landing, Edmonton, Alberta" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="2" aria-hidden="true">
+            <img src="assets/images/dev/elite-centre-northwest-crossing.jpg" alt="Elite Centre Northwest Crossing, 403 Mistatim Way, Edmonton, Alberta" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="3" aria-hidden="true">
+            <img src="assets/images/dev/elite-centre-on-50th.jpg" alt="Elite Centre on 50th, 4905 Roper Road NW, Edmonton, Alberta" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="4" aria-hidden="true">
+            <img src="assets/images/dev/sherwood-park.jpg" alt="Sherwood Park, Lakeland Dr and Buckingham Dr, Sherwood Park, Alberta" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="5" aria-hidden="true">
+            <img src="assets/images/dev/elite-centre-tamarack.jpg" alt="Elite Centre Tamarack, 2341 Maple Road NW, Edmonton, Alberta" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="6" aria-hidden="true">
+            <img src="assets/images/dev/elite-centre-clareview-crossing.jpg" alt="Elite Centre Clareview Crossing, Edmonton" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="7" aria-hidden="true">
+            <img src="assets/images/dev/elite-pointe-at-windermere.jpg" alt="Elite Pointe at Windermere, Edmonton" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="8" aria-hidden="true">
+            <img src="assets/images/dev/windermere-elite-centre.jpg" alt="Windermere Elite Centre, Edmonton" loading="lazy">
+          </article>
+          <article class="dv-slide" data-i="9" aria-hidden="true">
+            <img src="assets/images/dev/millwoods-car-wash.jpg" alt="Millwoods Car Wash, 3606 82 Street NW, Edmonton, Alberta" loading="lazy">
+          </article>
+        <div class="dv-shade" aria-hidden="true"></div>
+        <div class="wrap dv-over">
+          <div class="dv-card">
+            <p class="kick">Developments</p>
+            <h2 id="dv-title">A track record of delivering high quality projects in a timely fashion.</h2>
+            <div class="dv-now">
+              <span class="dv-st" data-dv-st>In progress</span>
+              <p class="dv-name" data-dv-name>Elite Centre Chappelle</p>
+              <p class="dv-addr" data-dv-addr>8305 Chappelle Way SW, Edmonton, Alberta</p>
+            </div>
+            <div class="dv-ctrl">
+              <button type="button" class="dv-arr" data-dv="-1" aria-label="Previous development"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+              <span class="dv-count"><b data-dv-i>1</b> of 10</span>
+              <button type="button" class="dv-arr" data-dv="1" aria-label="Next development"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="wrap">
-        <div class="build-head reveal">
-          <p class="eyebrow">Developments</p>
-          <h2 id="build-title">Now building.</h2>
-          <p>Elite Real Estate Group has a track record of delivering high quality projects in a timely fashion. Four developments are under way, with another planned for Sherwood Park.</p>
+        <ul class="dv-list"><li><button type="button" class="dv-pick is-on" data-i="0" data-st="progress" data-name="Elite Centre Chappelle" data-addr="8305 Chappelle Way SW, Edmonton, Alberta"><span class="dv-pick-name">Elite Centre Chappelle</span><span class="dv-pick-st st-progress">In progress</span></button></li><li><button type="button" class="dv-pick" data-i="1" data-st="progress" data-name="Cardinal Landing" data-addr="Edmonton, Alberta"><span class="dv-pick-name">Cardinal Landing</span><span class="dv-pick-st st-progress">In progress</span></button></li><li><button type="button" class="dv-pick" data-i="2" data-st="progress" data-name="Elite Centre Northwest Crossing" data-addr="403 Mistatim Way, Edmonton, Alberta"><span class="dv-pick-name">Elite Centre Northwest Crossing</span><span class="dv-pick-st st-progress">In progress</span></button></li><li><button type="button" class="dv-pick" data-i="3" data-st="progress" data-name="Elite Centre on 50th" data-addr="4905 Roper Road NW, Edmonton, Alberta"><span class="dv-pick-name">Elite Centre on 50th</span><span class="dv-pick-st st-progress">In progress</span></button></li><li><button type="button" class="dv-pick" data-i="4" data-st="future" data-name="Sherwood Park" data-addr="Lakeland Dr and Buckingham Dr, Sherwood Park, Alberta"><span class="dv-pick-name">Sherwood Park</span><span class="dv-pick-st st-future">Future project</span></button></li><li><button type="button" class="dv-pick" data-i="5" data-st="completed" data-name="Elite Centre Tamarack" data-addr="2341 Maple Road NW, Edmonton, Alberta"><span class="dv-pick-name">Elite Centre Tamarack</span><span class="dv-pick-st st-completed">Completed</span></button></li><li><button type="button" class="dv-pick" data-i="6" data-st="completed" data-name="Elite Centre Clareview Crossing" data-addr="Edmonton"><span class="dv-pick-name">Elite Centre Clareview Crossing</span><span class="dv-pick-st st-completed">Completed</span></button></li><li><button type="button" class="dv-pick" data-i="7" data-st="completed" data-name="Elite Pointe at Windermere" data-addr="Edmonton"><span class="dv-pick-name">Elite Pointe at Windermere</span><span class="dv-pick-st st-completed">Completed</span></button></li><li><button type="button" class="dv-pick" data-i="8" data-st="completed" data-name="Windermere Elite Centre" data-addr="Edmonton"><span class="dv-pick-name">Windermere Elite Centre</span><span class="dv-pick-st st-completed">Completed</span></button></li><li><button type="button" class="dv-pick" data-i="9" data-st="completed" data-name="Millwoods Car Wash" data-addr="3606 82 Street NW, Edmonton, Alberta"><span class="dv-pick-name">Millwoods Car Wash</span><span class="dv-pick-st st-completed">Completed</span></button></li></ul>
+      </div>
+    </section>
+
+    <section class="pf" id="portfolio" aria-labelledby="pf-title">
+      <div class="wrap pf-head">
+        <div class="reveal">
+          <p class="kick">Portfolio</p>
+          <h2 id="pf-title">Our portfolio includes several international, national and regional tenants.</h2>
         </div>
-        <div class="build-grid">
-          <figure class="bg bg-a reveal"><img src="assets/images/dev/elite-centre-chappelle.jpg" alt="Elite Centre Chappelle, Edmonton" loading="lazy"><figcaption><b>Elite Centre Chappelle</b><span>8305 Chappelle Way SW, Edmonton</span><i>In progress</i></figcaption></figure>
-          <figure class="bg bg-b reveal"><img src="assets/images/dev/cardinal-landing-sm.jpg" alt="Rendering of Cardinal Landing" loading="lazy"><figcaption><b>Cardinal Landing</b><span>Edmonton, Alberta</span><i>In progress</i></figcaption></figure>
-          <figure class="bg bg-c reveal"><img src="assets/images/dev/elite-centre-northwest-crossing-sm.jpg" alt="Elite Centre Northwest Crossing, Edmonton" loading="lazy"><figcaption><b>Elite Centre Northwest Crossing</b><span>403 Mistatim Way, Edmonton</span><i>In progress</i></figcaption></figure>
-          <figure class="bg bg-d reveal"><img src="assets/images/dev/elite-centre-on-50th.jpg" alt="Aerial rendering of Elite Centre on 50th, Edmonton" loading="lazy"><figcaption><b>Elite Centre on 50th</b><span>4905 Roper Road NW, Edmonton</span><i>In progress</i></figcaption></figure>
-          <figure class="bg bg-e reveal"><img src="assets/images/dev/sherwood-park-sm.jpg" alt="Rendering of the Sherwood Park development" loading="lazy"><figcaption><b>Sherwood Park</b><span>Lakeland Dr and Buckingham Dr, Sherwood Park</span><i>Future project</i></figcaption></figure>
+        <div class="pf-tools reveal">
+          <div class="pf-tabs" role="group" aria-label="Filter portfolio">
+            <button type="button" class="is-on" data-cat="all" aria-pressed="true">All <sup>30</sup></button>
+            <button type="button" data-cat="retail" aria-pressed="false">Shopping centres <sup>24</sup></button>
+            <button type="button" data-cat="res" aria-pressed="false">Apartments and towers <sup>6</sup></button>
+          </div>
+          <div class="pf-arrows">
+            <button type="button" data-rl="-1" aria-label="Scroll portfolio left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <button type="button" data-rl="1" aria-label="Scroll portfolio right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          </div>
         </div>
-        <div class="done reveal">
-          <h3>Completed</h3>
-          <ul class="done-list">
-            <li><span class="cr-img"><img src="assets/images/dev/elite-centre-tamarack-sm.jpg" alt="" loading="lazy"></span><span class="cr-name">Elite Centre Tamarack</span><span class="cr-addr">2341 Maple Road NW, Edmonton, Alberta</span><span class="cr-st">Completed</span></li>
-            <li><span class="cr-img"><img src="assets/images/dev/elite-centre-clareview-crossing-sm.jpg" alt="" loading="lazy"></span><span class="cr-name">Elite Centre Clareview Crossing</span><span class="cr-addr">Edmonton</span><span class="cr-st">Completed</span></li>
-            <li><span class="cr-img"><img src="assets/images/dev/elite-pointe-at-windermere-sm.jpg" alt="" loading="lazy"></span><span class="cr-name">Elite Pointe at Windermere</span><span class="cr-addr">Edmonton</span><span class="cr-st">Completed</span></li>
-            <li><span class="cr-img"><img src="assets/images/dev/windermere-elite-centre-sm.jpg" alt="" loading="lazy"></span><span class="cr-name">Windermere Elite Centre</span><span class="cr-addr">Edmonton</span><span class="cr-st">Completed</span></li>
-            <li><span class="cr-img"><img src="assets/images/dev/millwoods-car-wash-sm.jpg" alt="" loading="lazy"></span><span class="cr-name">Millwoods Car Wash</span><span class="cr-addr">3606 82 Street NW, Edmonton, Alberta</span><span class="cr-st">Completed</span></li>
+      </div>
+      <ul class="rail" data-rail tabindex="0" aria-label="Portfolio properties">
+          <li class="rl-card" data-cat="res">
+            <div class="rl-img"><img src="assets/images/port/the-palisades-sm.jpg" alt="The Palisades" loading="lazy"></div>
+            <p class="rl-kind">Apartments and towers</p>
+            <h3>The Palisades</h3>
+            <p class="rl-addr">9820 104 Street NW, Edmonton, AB T5K 0Y8</p>
+          </li>
+          <li class="rl-card" data-cat="res">
+            <div class="rl-img"><img src="assets/images/port/tower-hill-sm.jpg" alt="Tower Hill" loading="lazy"></div>
+            <p class="rl-kind">Apartments and towers</p>
+            <h3>Tower Hill</h3>
+            <p class="rl-addr">9624 105 St NW, Edmonton, AB T5K 0Z8</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-tamarack-sm.jpg" alt="Elite Centre Tamarack" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Tamarack</h3>
+            <p class="rl-addr">2341 Maple Road NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/summer-breeze-shopping-centre-sm.jpg" alt="Summer Breeze Shopping Centre" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Summer Breeze Shopping Centre</h3>
+            <p class="rl-addr">4108 Calgary Trail NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-ellerslie-landing-sm.jpg" alt="Elite Centre Ellerslie Landing" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Ellerslie Landing</h3>
+            <p class="rl-addr">9204 Ellerslie Rd SW, Edmonton, AB T6X 0K6</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-parsons-sm.jpg" alt="Elite Centre Parsons" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Parsons</h3>
+            <p class="rl-addr">3408 99 St NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-daly-grove-sm.jpg" alt="Elite Centre Daly Grove" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Daly Grove</h3>
+            <p class="rl-addr">4205 23 AVE NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-chappelle-sm.jpg" alt="Elite Centre Chappelle" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Chappelle</h3>
+            <p class="rl-addr">8305 Chappelle Way SW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-macewan-sm.jpg" alt="Elite Centre MacEwan" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre MacEwan</h3>
+            <p class="rl-addr">16 MacEwan Drive NW, Calgary, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-palisades-sm.jpg" alt="Elite Centre Palisades" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Palisades</h3>
+            <p class="rl-addr">127th Street NW &amp; 140th Avenue NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-bluequill-sm.jpg" alt="Elite Centre Bluequill" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Bluequill</h3>
+            <p class="rl-addr">348 Saddleback Road NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-clareview-crossing-sm.jpg" alt="Elite Centre Clareview Crossing" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Clareview Crossing</h3>
+            <p class="rl-addr">13750 50 St, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-duggan-sm.jpg" alt="Elite Centre Duggan" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Duggan</h3>
+            <p class="rl-addr">4027 106 St. NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-tipaskan-sm.jpg" alt="Elite Centre Tipaskan" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Tipaskan</h3>
+            <p class="rl-addr">3606 82 Street NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-nw-crossing-sm.jpg" alt="Elite Centre NW Crossing" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre NW Crossing</h3>
+            <p class="rl-addr">403 Mistatim Way NW</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-millcreek-sm.jpg" alt="Elite Centre Millcreek" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Millcreek</h3>
+            <p class="rl-addr">4004 50 Street NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/vantage-shopping-centre-sm.jpg" alt="Vantage Shopping Centre" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Vantage Shopping Centre</h3>
+            <p class="rl-addr">5110-50 street Leduc, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-kennedale-sm.jpg" alt="Elite Centre Kennedale" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Kennedale</h3>
+            <p class="rl-addr">12981 50th Street NW, Edmonton, AB, T5A 3P3</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-aspenwood-sm.jpg" alt="Elite Centre Aspenwood" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Aspenwood</h3>
+            <p class="rl-addr">4412 36 Avenue NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="res">
+            <div class="rl-img"><img src="assets/images/port/capital-view-tower-sm.jpg" alt="Capital View Tower" loading="lazy"></div>
+            <p class="rl-kind">Apartments and towers</p>
+            <h3>Capital View Tower</h3>
+            <p class="rl-addr">10711 Saskatchewan Drive NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="res">
+            <div class="rl-img"><img src="assets/images/port/kingsway-tower-sm.jpg" alt="Kingsway Tower" loading="lazy"></div>
+            <p class="rl-kind">Apartments and towers</p>
+            <h3>Kingsway Tower</h3>
+            <p class="rl-addr">11027 102 Street NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="res">
+            <div class="rl-img"><img src="assets/images/port/concord-tower-sm.jpg" alt="Concord Tower" loading="lazy"></div>
+            <p class="rl-kind">Apartments and towers</p>
+            <h3>Concord Tower</h3>
+            <p class="rl-addr">11147 Whyte Avenue NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="res">
+            <div class="rl-img"><img src="assets/images/port/mactaggart-place-apartments-sm.jpg" alt="MacTaggart Place Apartments" loading="lazy"></div>
+            <p class="rl-kind">Apartments and towers</p>
+            <h3>MacTaggart Place Apartments</h3>
+            <p class="rl-addr">5872 Mullen Place NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-whitemud-crossing-sm.jpg" alt="Elite Centre Whitemud Crossing" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Whitemud Crossing</h3>
+            <p class="rl-addr">4211 106 Street NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-crossroads-sm.jpg" alt="Elite Centre Crossroads" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Crossroads</h3>
+            <p class="rl-addr">4208 Calgary Trail NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-coast-home-centre-sm.jpg" alt="Elite Coast Home Centre" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Coast Home Centre</h3>
+            <p class="rl-addr">10804 170 Street NW, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-k-mall-sm.jpg" alt="Elite Centre K-Mall" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre K-Mall</h3>
+            <p class="rl-addr">9261 34 Avenue, Edmonton, AB</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-memorial-square-sm.jpg" alt="Elite Centre Memorial Square" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Memorial Square</h3>
+            <p class="rl-addr">5268 Memorial Drive Calgary</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/elite-centre-parkwest-sm.jpg" alt="Elite Centre Parkwest" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Elite Centre Parkwest</h3>
+            <p class="rl-addr">18904/28 87 AVE NW, Edmonton</p>
+          </li>
+          <li class="rl-card" data-cat="retail">
+            <div class="rl-img"><img src="assets/images/port/plaza-97-sm.jpg" alt="Plaza 97" loading="lazy"></div>
+            <p class="rl-kind">Shopping centre</p>
+            <h3>Plaza 97</h3>
+            <p class="rl-addr">12703 97 Street NW, Edmonton</p>
+          </li>
+      </ul>
+      <div class="wrap">
+        <div class="rail-bar" aria-hidden="true"><span data-rail-bar></span></div>
+        <p class="pf-note">Properties in Edmonton, Calgary and Leduc, and also in Saskatoon, Sherwood Park, Mississauga, Vermilion, Lloydminster, Morinville, Hinton, Whitecourt and Provost.</p>
+      </div>
+    </section>
+
+    <section class="grp" aria-label="Elite Living and Elite Capital">
+      <article class="grp-half reveal">
+        <img src="assets/images/port/the-palisades.jpg" alt="The Palisades apartments in Edmonton" loading="lazy">
+        <div class="grp-body">
+          <p class="kick">Elite Living</p>
+          <h2>Apartment homes, including MacTaggart Place Apartments.</h2>
+          <span class="link-gold">liveelite.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        </div>
+      </article>
+      <article class="grp-half reveal">
+        <img src="assets/images/port/elite-centre-parsons.jpg" alt="Elite Centre Parsons, a retail property in Edmonton" loading="lazy">
+        <div class="grp-body">
+          <p class="kick">Elite Capital</p>
+          <h2>A private lending firm that specializes in financing commercial real estate assets, primarily retail properties.</h2>
+          <a class="link-gold" href="#contact">Talk to us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="lead" id="leadership" aria-labelledby="lead-title">
+      <div class="wrap lead-grid">
+        <div class="lead-side reveal">
+          <p class="kick">Leadership</p>
+          <h2 id="lead-title">Partners since 2006.</h2>
+          <p>Surinder and Pankaj joined hands in 2006 and have since created a real estate business with assets over $500 million.</p>
+          <p class="lead-big"><span class="gold">$500M+</span> built together</p>
+        </div>
+        <article class="pcard reveal">
+          <span class="mono" aria-hidden="true">SM</span>
+          <h3>Surinder Mahajan</h3>
+          <p class="role">Managing Partner</p>
+          <p>Surinder has extensive experience in commercial real estate over several decades. He acquired his first property, a Circle K and Petro Canada gas station, in 1989 and still owns it today. He holds a CA degree with deep experience in accounting and tax.</p>
+          <a href="mailto:smahajan@elitedevelopments.ca">smahajan@elitedevelopments.ca</a>
+        </article>
+        <article class="pcard reveal">
+          <span class="mono" aria-hidden="true">PC</span>
+          <h3>Pankaj Chopra</h3>
+          <p class="role">Managing Partner</p>
+          <p>Pankaj has been active in commercial real estate since 2004, with in-depth knowledge of both acquisitions and development. He spearheads the Acquisition Arm and Asset Management Strategic Planning, and believes in value creation.</p>
+          <a href="mailto:pchopra@elitedevelopments.ca">pchopra@elitedevelopments.ca</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" id="contact" aria-labelledby="cta-title">
+      <img class="cta-bg" src="assets/images/port/elite-centre-daly-grove.jpg" alt="" loading="lazy">
+      <div class="cta-shade" aria-hidden="true"></div>
+      <div class="wrap cta-grid">
+        <div class="cta-copy reveal">
+          <p class="kick">Contact</p>
+          <h2 id="cta-title">Get in touch about leasing and buying opportunities.</h2>
+          <ul class="cta-lines">
+            <li><span>Call</span><a href="tel:+17802440021">(780) 244-0021</a></li>
+            <li><span>Email</span><a href="mailto:info@elitedevelopments.ca">info@elitedevelopments.ca</a></li>
+            <li><span>Office</span>Edmonton, Alberta</li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- Portfolio: tally by city + photo wall -->
-    <section class="wall" aria-labelledby="wall-title">
-      <div class="wrap wall-grid">
-        <div class="wall-side reveal">
-          <p class="eyebrow">Portfolio</p>
-          <h2 id="wall-title">Across the portfolio.</h2>
-          <ul class="cities">
-            <li><b>27</b> Edmonton</li>
-            <li><b>2</b> Calgary</li>
-            <li><b>1</b> Leduc</li>
-          </ul>
-          <p class="wall-note">Plus properties in Saskatoon, Sherwood Park, Mississauga, Vermilion, Lloydminster, Morinville, Hinton, Whitecourt and Provost.</p>
-          <button class="pill pill-dark" type="button" data-plist-btn aria-expanded="false" aria-controls="plist">See all 30 properties</button>
-        </div>
-        <div class="wall-photos">
-          <figure class="w w1 reveal"><img src="assets/images/port/tower-hill-sm.jpg" alt="Tower Hill, Edmonton" loading="lazy"><figcaption>Tower Hill</figcaption></figure>
-          <figure class="w w2 reveal"><img src="assets/images/port/elite-centre-bluequill-sm.jpg" alt="Elite Centre Bluequill, Edmonton" loading="lazy"><figcaption>Elite Centre Bluequill</figcaption></figure>
-          <figure class="w w3 reveal"><img src="assets/images/port/elite-centre-macewan-sm.jpg" alt="Elite Centre MacEwan, Calgary" loading="lazy"><figcaption>Elite Centre MacEwan, Calgary</figcaption></figure>
-          <figure class="w w4 reveal"><img src="assets/images/port/vantage-shopping-centre-sm.jpg" alt="Vantage Shopping Centre, Leduc" loading="lazy"><figcaption>Vantage Shopping Centre, Leduc</figcaption></figure>
-          <figure class="w w5 reveal"><img src="assets/images/port/elite-centre-parkwest-sm.jpg" alt="Elite Centre Parkwest, Edmonton" loading="lazy"><figcaption>Elite Centre Parkwest</figcaption></figure>
-        </div>
-      </div>
-      <div class="wrap">
-        <ul class="plist" id="plist" hidden><li><span class="pl-n">Capital View Tower</span><span class="pl-a">10711 Saskatchewan Drive NW, Edmonton, AB</span></li><li><span class="pl-n">Concord Tower</span><span class="pl-a">11147 Whyte Avenue NW, Edmonton, AB</span></li><li><span class="pl-n">Elite Centre Aspenwood</span><span class="pl-a">4412 36 Avenue NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Bluequill</span><span class="pl-a">348 Saddleback Road NW, Edmonton, AB</span></li><li><span class="pl-n">Elite Centre Chappelle</span><span class="pl-a">8305 Chappelle Way SW, Edmonton</span></li><li><span class="pl-n">Elite Centre Clareview Crossing</span><span class="pl-a">13750 50 St, Edmonton</span></li><li><span class="pl-n">Elite Centre Crossroads</span><span class="pl-a">4208 Calgary Trail NW, Edmonton, AB</span></li><li><span class="pl-n">Elite Centre Daly Grove</span><span class="pl-a">4205 23 AVE NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Duggan</span><span class="pl-a">4027 106 St. NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Ellerslie Landing</span><span class="pl-a">9204 Ellerslie Rd SW, Edmonton, AB T6X 0K6</span></li><li><span class="pl-n">Elite Centre K-Mall</span><span class="pl-a">9261 34 Avenue, Edmonton, AB</span></li><li><span class="pl-n">Elite Centre Kennedale</span><span class="pl-a">12981 50th Street NW, Edmonton, AB, T5A 3P3</span></li><li><span class="pl-n">Elite Centre Millcreek</span><span class="pl-a">4004 50 Street NW, Edmonton</span></li><li><span class="pl-n">Elite Centre NW Crossing</span><span class="pl-a">403 Mistatim Way NW</span></li><li><span class="pl-n">Elite Centre Palisades</span><span class="pl-a">127th Street NW & 140th Avenue NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Parkwest</span><span class="pl-a">18904/28 87 AVE NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Parsons</span><span class="pl-a">3408 99 St NW, Edmonton, AB</span></li><li><span class="pl-n">Elite Centre Tamarack</span><span class="pl-a">2341 Maple Road NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Tipaskan</span><span class="pl-a">3606 82 Street NW, Edmonton</span></li><li><span class="pl-n">Elite Centre Whitemud Crossing</span><span class="pl-a">4211 106 Street NW, Edmonton, AB</span></li><li><span class="pl-n">Elite Coast Home Centre</span><span class="pl-a">10804 170 Street NW, Edmonton, AB</span></li><li><span class="pl-n">Kingsway Tower</span><span class="pl-a">11027 102 Street NW, Edmonton, AB</span></li><li><span class="pl-n">MacTaggart Place Apartments</span><span class="pl-a">5872 Mullen Place NW, Edmonton, AB</span></li><li><span class="pl-n">Plaza 97</span><span class="pl-a">12703 97 Street NW, Edmonton</span></li><li><span class="pl-n">Summer Breeze Shopping Centre</span><span class="pl-a">4108 Calgary Trail NW, Edmonton, AB</span></li><li><span class="pl-n">The Palisades</span><span class="pl-a">9820 104 Street NW, Edmonton, AB T5K 0Y8</span></li><li><span class="pl-n">Tower Hill</span><span class="pl-a">9624 105 St NW, Edmonton, AB T5K 0Z8</span></li><li><span class="pl-n">Elite Centre MacEwan</span><span class="pl-a">16 MacEwan Drive NW, Calgary, AB</span></li><li><span class="pl-n">Elite Centre Memorial Square</span><span class="pl-a">5268 Memorial Drive Calgary</span></li><li><span class="pl-n">Vantage Shopping Centre</span><span class="pl-a">5110-50 street Leduc, AB</span></li></ul>
-      </div>
-    </section>
-
-    <!-- The group -->
-    <section class="group2" aria-label="Elite Living and Elite Capital">
-      <div class="wrap group2-grid">
-        <article class="brandcard bc-living reveal">
-          <p class="bc-name">Elite <em>Living</em></p>
-          <p>Apartment homes across the residential portfolio, including MacTaggart Place Apartments.</p>
-          <span class="bc-link">liveelite.ca</span>
-        </article>
-        <article class="brandcard bc-capital reveal">
-          <p class="bc-name">Elite <em>Capital</em></p>
-          <p>A private lending firm that specializes in financing commercial real estate assets, primarily retail properties.</p>
-          <span class="bc-link">Financing inquiries welcome</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- Partners -->
-    <section class="partners2" aria-labelledby="p2-title">
-      <div class="wrap">
-        <p class="eyebrow reveal">Leadership</p>
-        <h2 id="p2-title" class="reveal">Surinder and Pankaj joined hands in 2006.</h2>
-        <div class="p2-grid">
-          <article class="p2 reveal">
-            <span class="p2-ini" aria-hidden="true">SM</span>
-            <h3>Surinder Mahajan</h3>
-            <p class="p2-role">Managing Partner</p>
-            <p>Several decades in commercial real estate. Surinder acquired his first property, a Circle K and Petro Canada gas station, in 1989 and still owns it today. He holds a CA degree with deep experience in accounting and tax.</p>
-          </article>
-          <article class="p2 reveal">
-            <span class="p2-ini" aria-hidden="true">PC</span>
-            <h3>Pankaj Chopra</h3>
-            <p class="p2-role">Managing Partner</p>
-            <p>Active in commercial real estate since 2004, with in-depth knowledge of both acquisitions and development. Pankaj spearheads the Acquisition Arm and Asset Management Strategic Planning, and believes in value creation.</p>
-          </article>
-          <aside class="p2-note reveal"><p>Together they have created a real estate business with assets over $500 million.</p></aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Talk -->
-    <section class="talk" id="talk" aria-labelledby="talk-title">
-      <div class="wrap talk-grid">
-        <div class="talk-copy reveal">
-          <p class="eyebrow eyebrow-light">Contact</p>
-          <h2 id="talk-title">Leasing or buying? Let's talk.</h2>
-          <a class="talk-phone" href="tel:+17802440021">(780) 244-0021</a>
-          <a class="talk-mail" href="mailto:info@elitedevelopments.ca">info@elitedevelopments.ca</a>
-        </div>
-        <form class="talk-form reveal" action="mailto:info@elitedevelopments.ca" method="post" enctype="text/plain" novalidate>
-          <p class="tf-q">What can we help with?</p>
-          <div class="tf-opts">
+        <form class="cform reveal" novalidate>
+          <h3>Send an inquiry</h3>
+          <fieldset class="cf-topics">
+            <legend>I'm interested in</legend>
             <label><input type="radio" name="topic" value="Leasing" checked><span>Leasing</span></label>
             <label><input type="radio" name="topic" value="Buying"><span>Buying</span></label>
-            <label><input type="radio" name="topic" value="Elite Capital financing"><span>Financing</span></label>
-            <label><input type="radio" name="topic" value="Elite Living apartments"><span>Apartments</span></label>
+            <label><input type="radio" name="topic" value="Elite Capital financing"><span>Elite Capital</span></label>
+            <label><input type="radio" name="topic" value="Elite Living apartments"><span>Elite Living</span></label>
+          </fieldset>
+          <div class="cf-row">
+            <label class="cf"><span>Name</span><input name="name" autocomplete="name" required></label>
+            <label class="cf"><span>Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
           </div>
-          <label class="tf"><input name="name" placeholder=" " autocomplete="name" required><span>Your name</span></label>
-          <label class="tf"><input name="email" type="email" placeholder=" " autocomplete="email" required><span>Email</span></label>
-          <label class="tf"><input name="phone" type="tel" placeholder=" " autocomplete="tel"><span>Phone (optional)</span></label>
-          <label class="tf"><textarea name="message" rows="3" placeholder=" "></textarea><span>A few words about what you need</span></label>
-          <button class="pill pill-gold" type="submit">Send inquiry</button>
-          <p class="tf-note" role="status" aria-live="polite"></p>
+          <label class="cf"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label class="cf"><span>Message</span><textarea name="message" rows="4"></textarea></label>
+          <button class="btn btn-gold btn-full" type="submit">Send inquiry <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <p class="cf-note" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="wrap foot-top">
-      <img src="assets/images/logo-header.png" alt="Elite Real Estate Group" width="230" height="58" loading="lazy">
-      <p class="foot-big">Real estate development and investments, Edmonton.</p>
+  <footer class="ft">
+    <div class="wrap ft-cta">
+      <p>Leasing or buying? Talk to Elite Real Estate Group today.</p>
+      <a class="btn btn-gold" href="tel:+17802440021">Call (780) 244-0021</a>
     </div>
-    <div class="wrap foot-grid">
-      <div><h3>Company</h3><ul><li><a href="#" data-nolink>About</a></li><li><a href="#" data-nolink>Team</a></li><li><a href="#" data-nolink>Newsroom</a></li><li><a href="#" data-nolink>Contact</a></li></ul></div>
-      <div><h3>The group</h3><ul><li><a href="#" data-nolink>Elite Real Estate Group</a></li><li><a href="#" data-nolink>Elite Living</a></li><li><a href="#" data-nolink>Elite Capital</a></li></ul></div>
-      <div><h3>Services</h3><ul><li>Real Estate Development</li><li>Real Estate Acquisitions</li><li>In-house Leasing</li><li>Property Management</li></ul></div>
-      <div><h3>Now building</h3><ul><li>Elite Centre Chappelle</li><li>Cardinal Landing</li><li>Elite Centre Northwest Crossing</li><li>Elite Centre on 50th</li></ul></div>
-      <div><h3>By the numbers</h3><ul><li>2M+ sq ft leased</li><li>$625M+ in assets</li><li>500+ retail tenants</li><li>600+ apartments</li></ul></div>
-      <div class="foot-contact"><h3>Get in touch</h3><ul><li><a href="tel:+17802440021">(780) 244-0021</a></li><li><a href="mailto:info@elitedevelopments.ca">info@elitedevelopments.ca</a></li><li>Edmonton, Alberta</li></ul>
-        <div class="foot-soc"><a href="https://www.linkedin.com/company/elite-real-estate-group1/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 21H3.2V8.9h3.7V21ZM5 7.3a2.2 2.2 0 1 1 0-4.3 2.2 2.2 0 0 1 0 4.3ZM21 21h-3.7v-5.9c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1v6H9.4V8.9H13v1.7c.5-.9 1.7-2 3.5-2 3.8 0 4.5 2.5 4.5 5.7V21Z"/></svg></a><a href="https://www.instagram.com/eliterealestate.yeg/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2Zm6.1-8.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM21.5 8c-.1-1.6-.4-3-1.6-4.1C18.8 2.8 17.4 2.5 15.8 2.4c-1.6-.1-6.4-.1-8 0-1.6.1-3 .4-4.1 1.6C2.6 5.1 2.3 6.5 2.2 8.1c-.1 1.6-.1 6.4 0 8 .1 1.6.4 3 1.6 4.1 1.1 1.1 2.5 1.5 4.1 1.6 1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.1-1.6 1.1-1.1 1.5-2.5 1.6-4.1.1-1.6.1-6.4-.1-8.1Zm-2.2 9.9a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.6.4s-4.4.1-5.6-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.6s-.1-4.4.4-5.6a3.2 3.2 0 0 1 1.8-1.8c1.3-.5 4.3-.4 5.6-.4s4.4-.1 5.6.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.6s.1 4.4-.4 5.6Z"/></svg></a></div>
+    <div class="wrap ft-grid">
+      <div class="ft-brand">
+        <img src="assets/images/logo-header.png" alt="Elite Real Estate Group" width="220" height="56" loading="lazy">
+        <p>Elite Real Estate Group owns and manages over 2 million square feet of leased space, primarily retail shopping centres and apartments in Edmonton and Alberta.</p>
+        <div class="ft-soc"><a href="https://www.linkedin.com/company/elite-real-estate-group1/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 21H3.2V8.9h3.7V21ZM5 7.3a2.2 2.2 0 1 1 0-4.3 2.2 2.2 0 0 1 0 4.3ZM21 21h-3.7v-5.9c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1v6H9.4V8.9H13v1.7c.5-.9 1.7-2 3.5-2 3.8 0 4.5 2.5 4.5 5.7V21Z"/></svg></a><a href="https://www.instagram.com/eliterealestate.yeg/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2Zm6.1-8.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM21.5 8c-.1-1.6-.4-3-1.6-4.1C18.8 2.8 17.4 2.5 15.8 2.4c-1.6-.1-6.4-.1-8 0-1.6.1-3 .4-4.1 1.6C2.6 5.1 2.3 6.5 2.2 8.1c-.1 1.6-.1 6.4 0 8 .1 1.6.4 3 1.6 4.1 1.1 1.1 2.5 1.5 4.1 1.6 1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.1-1.6 1.1-1.1 1.5-2.5 1.6-4.1.1-1.6.1-6.4-.1-8.1Zm-2.2 9.9a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.6.4s-4.4.1-5.6-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.6s-.1-4.4.4-5.6a3.2 3.2 0 0 1 1.8-1.8c1.3-.5 4.3-.4 5.6-.4s4.4-.1 5.6.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.6s.1 4.4-.4 5.6Z"/></svg></a></div>
       </div>
+      <div><h3>Company</h3><ul><li><a href="#" data-nolink>About</a></li><li><a href="#" data-nolink>Team</a></li><li><a href="#" data-nolink>Newsroom</a></li><li><a href="#" data-nolink>Contact</a></li></ul></div>
+      <div><h3>What we do</h3><ul><li>Real Estate Development</li><li>Real Estate Acquisitions</li><li>In-house Leasing</li><li>Property Management</li></ul></div>
+      <div><h3>The group</h3><ul><li><a href="#" data-nolink>Elite Living</a></li><li><a href="#" data-nolink>Elite Capital</a></li><li><a href="#" data-nolink>Portfolio</a></li><li><a href="#" data-nolink>Developments</a></li></ul></div>
+      <div><h3>Get in touch</h3><ul><li><a href="tel:+17802440021">(780) 244-0021</a></li><li><a href="mailto:info@elitedevelopments.ca">info@elitedevelopments.ca</a></li><li>Edmonton, Alberta</li></ul></div>
     </div>
-    <div class="wrap foot-bottom">
+    <div class="wrap ft-bottom">
       <p>&copy; <span data-year>2026</span> Elite Real Estate Group. All rights reserved.</p>
       <ul><li><a href="#" data-nolink>Sitemap</a></li><li><a href="#" data-nolink>Privacy policy</a></li><li>Design by <a href="https://curatecollective.ca/" target="_blank" rel="noopener">curatecollective.ca</a></li></ul>
     </div>
