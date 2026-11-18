@@ -20,7 +20,7 @@
     menu.hidden = !open;
   };
   burger.addEventListener('click', function () { setMenu(menu.hidden); });
-  menu.addEventListener('click', function (e) { var a = e.target.closest('a'); if (a && !a.hasAttribute('data-nolink')) setMenu(false); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
   document.querySelectorAll('[data-nolink]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); }); });
 
@@ -68,18 +68,6 @@
         if (en[0].isIntersecting) rollAll(0);
       }, { threshold: 0.15 }).observe(ledger);
     }
-  }
-
-  /* Scroll spy: highlight the menu item for the section in view */
-  var spyLinks = document.querySelectorAll('[data-spy]');
-  if (spyLinks.length && 'IntersectionObserver' in window) {
-    var sio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        spyLinks.forEach(function (a) { a.classList.toggle('is-current', a.getAttribute('data-spy') === en.target.id); });
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    ['about', 'leadership', 'portfolio', 'developments', 'group', 'contact'].forEach(function (id) { var s = document.getElementById(id); if (s) sio.observe(s); });
   }
 
   /* Reveal on scroll */
