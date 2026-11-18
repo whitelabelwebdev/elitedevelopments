@@ -93,20 +93,98 @@
     reveals.forEach(function (el) { el.classList.add('is-in'); });
   }
 
-  /* Portfolio directory: hover a property to preview its photo */
-  var view = document.querySelector('[data-dir-img]');
-  var cap = document.querySelector('[data-dir-cap]');
-  if (view) {
-    var t = null;
-    document.querySelectorAll('.dgroup li[data-img]').forEach(function (li) {
-      li.addEventListener('mouseenter', function () {
-        var src = li.getAttribute('data-img');
-        cap.textContent = li.querySelector('.dn').textContent;
-        if (view.getAttribute('src') === src) return;
-        view.classList.add('is-swap');
-        clearTimeout(t);
-        t = setTimeout(function () { view.src = src; view.onload = function () { view.classList.remove('is-swap'); }; }, 160);
+  /* Developments filter */
+  var pfGrid = document.querySelector('[data-pf]');
+  if (pfGrid) {
+    var pfBtns = document.querySelectorAll('.pf-filter button');
+    var pfs = pfGrid.querySelectorAll('.pf');
+    pfBtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-f');
+        pfBtns.forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', String(on)); });
+        pfGrid.classList.toggle('is-filtered', f !== 'all');
+        pfs.forEach(function (p) {
+          var show = f === 'all' || p.getAttribute('data-status') === f;
+          p.classList.toggle('is-hidden', !show);
+          p.classList.remove('is-new');
+          if (show) { void p.offsetWidth; p.classList.add('is-new'); }
+        });
       });
+    });
+  }
+
+  /* Portfolio spotlight: tabs, arrows, thumbnails, auto-advance */
+  var spot = document.querySelector('.spot');
+  if (spot) {
+    var thumbs = Array.prototype.slice.call(spot.querySelectorAll('.sp-thumb'));
+    var img = spot.querySelector('[data-sp-img]');
+    var sName = spot.querySelector('[data-sp-name]'), sAddr = spot.querySelector('[data-sp-addr]'), sCity = spot.querySelector('[data-sp-city]');
+    var sCur = spot.querySelector('[data-sp-cur]'), sTot = spot.querySelector('[data-sp-total]');
+    var timer = spot.querySelector('.spot-timer');
+    var strip = spot.querySelector('[data-sp-strip]');
+    var cat = 'all', list = thumbs.slice(), idx = 0, tmo = null, inView = false, hover = false, DUR = 5000;
+    spot.style.setProperty('--sp-dur', DUR + 'ms');
+    var show = function (i) {
+      idx = (i + list.length) % list.length;
+      var t = list[idx];
+      thumbs.forEach(function (x) { x.classList.toggle('is-on', x === t); });
+      sName.textContent = t.getAttribute('data-name');
+      sAddr.textContent = t.getAttribute('data-addr');
+      sCity.textContent = t.getAttribute('data-city');
+      sCur.textContent = idx + 1; sTot.textContent = list.length;
+      img.classList.add('is-swap'); img.classList.remove('is-in');
+      setTimeout(function () {
+        img.src = t.getAttribute('data-img');
+        img.alt = t.getAttribute('data-name') + ', ' + t.getAttribute('data-addr');
+        var done = function () { img.classList.remove('is-swap'); void img.offsetWidth; img.classList.add('is-in'); };
+        if (img.complete) done(); else img.onload = done;
+      }, 220);
+      var li = t.parentNode;
+      strip.scrollTo({ left: li.offsetLeft - strip.clientWidth / 2 + li.clientWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+      schedule();
+    };
+    var schedule = function () {
+      clearTimeout(tmo);
+      timer.classList.remove('is-run'); void timer.offsetWidth;
+      if (reduce || !inView || hover) return;
+      timer.classList.add('is-run');
+      tmo = setTimeout(function () { show(idx + 1); }, DUR);
+    };
+    thumbs.forEach(function (t) { t.addEventListener('click', function () { show(list.indexOf(t)); }); });
+    spot.querySelector('[data-sp-prev]').addEventListener('click', function () { show(idx - 1); });
+    spot.querySelector('[data-sp-next]').addEventListener('click', function () { show(idx + 1); });
+    spot.querySelectorAll('.spot-tabs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        cat = b.getAttribute('data-cat');
+        spot.querySelectorAll('.spot-tabs button').forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', String(on)); });
+        list = thumbs.filter(function (t) { var ok = cat === 'all' || t.getAttribute('data-cat') === cat; t.parentNode.classList.toggle('is-hidden', !ok); return ok; });
+        show(0);
+      });
+    });
+    var stage = spot.querySelector('.spot-stage');
+    stage.addEventListener('mouseenter', function () { hover = true; spot.classList.add('is-paused'); clearTimeout(tmo); });
+    stage.addEventListener('mouseleave', function () { hover = false; spot.classList.remove('is-paused'); schedule(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { inView = en[0].isIntersecting; schedule(); }, { threshold: 0.3 }).observe(stage);
+    }
+    img.classList.add('is-in');
+  }
+
+  /* Contact form: validate, then open the visitor's email app */
+  var cform = document.querySelector('.cform');
+  if (cform) {
+    cform.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = cform.querySelector('.cnote');
+      var n = cform.elements.name, em = cform.elements.email, ok = true;
+      [n, em].forEach(function (f) { f.closest('.cf').classList.remove('has-error'); });
+      if (!n.value.trim()) { n.closest('.cf').classList.add('has-error'); ok = false; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) { em.closest('.cf').classList.add('has-error'); ok = false; }
+      if (!ok) { note.textContent = 'Please add your name and a valid email address.'; return; }
+      var topic = cform.elements.topic.value;
+      var body = 'Name: ' + n.value + '\nPhone: ' + cform.elements.phone.value + '\nEmail: ' + em.value + '\nInterested in: ' + topic + '\n\n' + cform.elements.message.value;
+      window.location.href = 'mailto:info@elitedevelopments.ca?subject=' + encodeURIComponent('Website inquiry: ' + topic) + '&body=' + encodeURIComponent(body);
+      note.textContent = 'Thanks. Your email app should open with your message ready to send.';
     });
   }
 
