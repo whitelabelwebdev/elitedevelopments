@@ -4,7 +4,9 @@
 
   /* Header shadow on scroll */
   var hdr = document.querySelector('.hdr');
-  var onScroll = function () { hdr.classList.toggle('is-scrolled', window.scrollY > 8); };
+  var setH = function () { document.documentElement.style.setProperty('--hdr-h', hdr.getBoundingClientRect().height + 'px'); };
+  var onScroll = function () { hdr.classList.toggle('is-scrolled', window.scrollY > 40); setH(); };
+  window.addEventListener('resize', setH);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -35,20 +37,50 @@
     vt.addEventListener('click', function () { setPaused(!video.paused); });
   }
 
-  /* Ledger count up */
-  document.querySelectorAll('[data-count]').forEach(function (el, i) {
-    var end = +el.getAttribute('data-count');
-    if (reduce) return;
-    el.textContent = '0';
-    setTimeout(function () {
-      var t0 = performance.now();
-      (function tick(now) {
-        var p = Math.min((now - t0) / 1600, 1);
-        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
-        if (p < 1) requestAnimationFrame(tick);
-      })(t0);
-    }, 800 + i * 120);
-  });
+  /* Ledger: numbers roll up each time the panel comes into view */
+  var nums = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+  var ledger = document.querySelector('.ledger');
+  var running = false;
+  function rollAll(delay) {
+    if (reduce || running) return;
+    running = true;
+    if (ledger) { ledger.classList.remove('is-live'); void ledger.offsetWidth; ledger.classList.add('is-live'); }
+    nums.forEach(function (el, i) {
+      var end = +el.getAttribute('data-count');
+      el.textContent = '0';
+      setTimeout(function () {
+        var t0 = performance.now();
+        (function tick(now) {
+          var p = Math.min((now - t0) / 2000, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
+          if (p < 1) requestAnimationFrame(tick);
+          else if (i === nums.length - 1) running = false;
+        })(t0);
+      }, delay + i * 160);
+    });
+  }
+  if (ledger) {
+    rollAll(700);
+    if ('IntersectionObserver' in window) {
+      var first = true;
+      new IntersectionObserver(function (en) {
+        if (first) { first = false; return; }
+        if (en[0].isIntersecting) rollAll(0);
+      }, { threshold: 0.15 }).observe(ledger);
+    }
+  }
+
+  /* Scroll spy: highlight the menu item for the section in view */
+  var spyLinks = document.querySelectorAll('[data-spy]');
+  if (spyLinks.length && 'IntersectionObserver' in window) {
+    var sio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        spyLinks.forEach(function (a) { a.classList.toggle('is-current', a.getAttribute('data-spy') === en.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['about', 'leadership', 'portfolio', 'developments', 'group', 'contact'].forEach(function (id) { var s = document.getElementById(id); if (s) sio.observe(s); });
+  }
 
   /* Reveal on scroll */
   var reveals = document.querySelectorAll('.reveal');
