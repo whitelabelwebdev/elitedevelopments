@@ -406,7 +406,7 @@ button { font: inherit; cursor: pointer; }
   .svc-cols h3 { font-size: 21px; }
   .pf-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; gap: 8px; }
   .pf-big { grid-row: span 2; }
-  .pf-tag { left: 8px; top: 8px; height: 24px; font-size: 10px; padding: 0 8px; }
+  .pf-tag { left: 8px; top: 8px; height: 26px; font-size: 11px; letter-spacing: .1em; padding: 0 8px; }
   .pf-info { padding: 12px; }
   .pf-name { font-size: 15px; }
   .pf-big .pf-name { font-size: 22px; }
